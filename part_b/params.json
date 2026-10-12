@@ -1,5 +1,15 @@
 {
-  "timeout": 10.0,
-  "retry": {"max_attempts": 1, "base": 0.5, "factor": 2.0, "cap": 4.0, "jitter": "none"},
-  "breaker": {"failure_threshold": 1000, "open_timeout": 30.0, "success_threshold": 1}
+  "timeout": 0.5,
+  "retry": {
+    "max_attempts": 3,
+    "base": 1.0,
+    "factor": 1.0,
+    "cap": 2.0,
+    "jitter": "none"
+  },
+  "breaker": {
+    "failure_threshold": 5,
+    "open_timeout": 10.0,
+    "success_threshold": 2
+  }
 }
